@@ -199,12 +199,14 @@
   </section>
 
   <section class="section" id="about">
-    <h2>За мен</h2>
-    <p>Казвам се Halim Muharem и съм отдаден QA специалист с фокус върху качественото ръчно тестване. Вярвам в прецизността, отговорността и комуникацията с екипа.</p>
+    <h2>За специалиста</h2>
+    <p>
+      Качественото ръчно тестване е основата на стабилните и надеждни софтуерни решения. Прецизността, отговорността и добрата комуникация с екипа са ключови за успешното откриване и отстраняване на бъгове.
+    </p>
   </section>
 
   <section class="section" id="contact">
-    <h2>Контакт</h2>
+    <h2>Запитвания</h2>
     <form action="mailto:halim.qa@example.com" method="post" enctype="text/plain">
       <label for="name">Име:</label>
       <input type="text" id="name" name="name" required />
@@ -223,5 +225,47 @@
     <p>&copy; 2025 QA Specialist Halim Muharem. Всички права запазени.</p>
   </footer>
 
+  <script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      if (!form.name.value.trim() || !form.email.value.trim() || !form.message.value.trim()) {
+        alert('Моля, попълнете всички полета.');
+        return;
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(form.email.value)) {
+        alert('Моля, въведете валиден имейл.');
+        return;
+      }
+
+      alert('Благодарим! Вашето съобщение е изпратено.');
+
+      form.reset();
+    });
+  </script>
+
 </body>
 </html>
+<section class="section" id="about">
+  <h2>За мен</h2>
+  <p>
+    Като амбициозен и целеустремен професионалист, развивам кариерата си в софтуерното тестване, привлечен от възможността да анализирам и осигурявам висококачествени продукти.
+  </p>
+  <p>
+    В момента преминавам интензивно обучение като QA тестер и притежавам няколко професионални сертификата в областта.
+  </p>
+  <p>
+    Съчетавайки отлични комуникационни умения, прецизност и внимание към детайла с опита си в обслужването на клиенти, мога да прилагам преносими умения и да допринасям ефективно в ИТ екипи.
+  </p>
+  <p>
+    Търся възможности за професионално развитие в QA, където мога активно да участвам в процеси, които подобряват качеството и подпомагат успеха на софтуерните проекти.
+  </p>
+</section>
+<section class="section" id="contact">
+  <h2>Контакт</h2>
+  <p>Телефон: <a href="tel:+359888123456">+359899407533</a></p>
+  <p>Имейл: <a href="mailto:halimmmuharem2001@gmail.com">halimmmuharem2001@gmail.com</a></p>
